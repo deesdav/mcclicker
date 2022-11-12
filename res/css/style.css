@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    font-family: 'VT323', monospace;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 710px;
+    margin: auto;
+    transition: .8s;
+}
+
+
+h1 {
+    text-align: center;
+    color: #b9f2ff;
+    display: block;
+    font-size: 45px;
+margin-top: 50px;
+
+}
+
+button, #info {
+    display: table;
+    margin: 0 auto;
+    border: none;
+    padding: 1em;
+   font-size: large;
+   background-color: rgba(0, 0, 0, 0.787);
+   color: #b9f2ff;
+   transition: .5s;
+   font-size: 20px;
+   cursor: pointer;
+}
+.box{
+    position: relative;
+    display: block;
+}
+#box-show{
+    padding: 1em;
+    color: black;
+    background-color: white;
+    display: none;
+    position: absolute;
+    right: 200px;
+    font-size: large;
+    top: 150px;
+}
+.box:hover #box-show{
+    display: block;
+}
+#changeBackground{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+
+#counter {
+    text-align: center;
+    margin: auto;
+    display: table;
+    font-size: 24px;
+    padding: 1em;
+    color: white;
+    animation: change 1s infinite alternate linear;
+    background-color: rgba(0, 0, 0, 0.787);
+}
+ @keyframes change{
+    0%{color: white;}
+    100%{color: #b9f2ff;}
+}
+#time{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    display: table;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.787);
+    color: #b9f2ff;;
+    font-size: 24px;
+    padding: 1em;
+}
+#aboutmusic{
+ position: absolute;
+ left: 0px;
+ top: 0px;
+ background-color: rgba(0, 0, 0, 0.787);
+ color: #b9f2ff;
+ font-size: larger;
+ padding: 1em;
+}
+
+
+
+#cookie{
+    cursor: pointer;
+    width: 250px;
+    height: 250px;
+     display: block;
+     margin: 0 auto;
+     padding: 2em;
+     transition: .5s;
+}
+#cookie2, #cookie3, #cookie4 {
+    cursor: pointer;
+    width: 250px;
+    height: 250px;
+     display: none;
+     padding: 2em;
+     margin: 0 auto;
+     transition: .5s;
+}
+#cookie:hover{
+    transform: scale(1.1);
+}
+#cookie2:hover{
+    transform: scale(1.1);
+}
+#cookie3:hover{
+    transform: scale(1.1);
+}
+#cookie4:hover{
+    transform: scale(1.1);
+}
+

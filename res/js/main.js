@@ -1,0 +1,111 @@
+const info = document.getElementById("info");
+const cookie = document.getElementById("cookie");
+const cookie2 = document.getElementById("cookie2");
+const cookie3 = document.getElementById("cookie3");
+const cookie4 = document.getElementById("cookie4");
+const counter = document.getElementById("counter");
+const cookieClickMultiplier = document.getElementById("cookieClickMultiplier");
+const autoClickerButton = document.getElementById("autoClickerButton");
+const time = document.getElementById("time");
+const aboutmusic = document.getElementById("aboutmusic");
+const show = document.getElementById("box-show");
+const changeBackground = document.getElementById("changeBackground");
+
+const timer = time.onclick = () => {
+    document.getElementById("time").innerHTML = Date();
+}
+setInterval(() => {
+    timer();
+}, 1000);
+
+const randomNumber = (minimum, maximum) => {
+    const myNum = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+    return myNum;
+}
+console.log(randomNumber(0, 255));
+const changeColor = () => {
+    let r = randomNumber(0, 255);
+    let g = randomNumber(0, 255);
+    let b = randomNumber(0, 255);
+
+    document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+}
+
+changeBackground.onclick = () => {
+    changeColor();
+    document.body.style.backgroundImage = "none";
+    changeBackground.style.display = "none";
+}
+setInterval(() => {
+    changeColor();
+}, 1000);
+
+
+
+let numberOfCookies = 0;
+let cookieIncrease = 1;
+let autoClickerPrice = 100;
+let autoClickerIncrease = 0;
+
+cookie.onclick = () => {
+    numberOfCookies += cookieIncrease;
+    counter.innerHTML = `Cookies: ` + numberOfCookies;
+    if (numberOfCookies == 150) {
+        cookie.style.display = "none";
+        cookie2.style.display = "block";
+    }
+    if (numberOfCookies == 1) {
+        show.style.display = "none";
+        aboutmusic.style.display = "none";
+    }
+
+}
+cookie2.onclick = () => {
+    numberOfCookies += cookieIncrease;
+    counter.innerHTML = `Cookies: ` + numberOfCookies;
+    if (numberOfCookies == 250) {
+        cookie2.style.display = "none";
+        cookie3.style.display = "block";
+    }
+}
+cookie3.onclick = () => {
+    numberOfCookies += cookieIncrease;
+    counter.innerHTML = `Cookies: ` + numberOfCookies;
+    if (numberOfCookies == 350) {
+        cookie3.style.display = "none";
+        cookie4.style.display = "block";
+    }
+
+}
+cookie4.onclick = () => {
+    numberOfCookies += cookieIncrease;
+    counter.innerHTML = `Cookies: ` + numberOfCookies;
+
+}
+
+
+cookieClickMultiplier.onclick = () => {
+    if (numberOfCookies >= 50) {
+        numberOfCookies -= 50; // numberOfCookies = numberOfCookies - 50;
+        cookieIncrease++;
+        counter.innerHTML = `Cookies: ` + numberOfCookies;
+        let t = cookieIncrease - 1;
+        info.innerHTML = `You bought a new upgrade with turbo ${t}x`;
+    }
+}
+
+autoClickerButton.onclick = () => {
+    if (numberOfCookies >= autoClickerPrice) {
+        numberOfCookies -= autoClickerPrice;
+        counter.innerHTML = `Cookies: ` + numberOfCookies;
+        autoClickerPrice *= 2;
+        autoClickerButton.innerHTML = `Buy Auto Clicker: ${autoClickerPrice}`;
+        if (autoClickerIncrease == 0) {
+            setInterval(() => {
+                numberOfCookies += autoClickerIncrease;
+                counter.innerHTML = `Cookies: ` + numberOfCookies;
+            }, 1000);
+        }
+        autoClickerIncrease++;
+    }
+}
