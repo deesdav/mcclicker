@@ -92,6 +92,11 @@ cookie2.onclick = () => {
         cookie2.style.display = "none";
         cookie3.style.display = "block";
     }
+    if(numberOfCookies>=50){
+        info.style.display = "table";
+        info.innerHTML = `Hurry up, you can bought an upgrade!`;
+        info.style.color = "red";
+    } 
 }
 cookie3.onclick = () => {
     numberOfCookies += cookieIncrease;
@@ -100,20 +105,30 @@ cookie3.onclick = () => {
         cookie3.style.display = "none";
         cookie4.style.display = "block";
     }
+    if(numberOfCookies>=50){
+        info.style.display = "table";
+        info.innerHTML = `Hurry up, you can bought an upgrade!`;
+        info.style.color = "red";
+    } 
 
 }
 cookie4.onclick = () => {
     numberOfCookies += cookieIncrease;
-    counter.innerHTML = `Diamonds: ` + numberOfCookies;
-
+    counter.innerHTML = `Raw materials: ` + numberOfCookies;
+    if(numberOfCookies>=50){
+        info.style.display = "table";
+        info.innerHTML = `Hurry up, you can bought an upgrade!`;
+        info.style.color = "red";
+    } 
 }
+
 
 
 cookieClickMultiplier.onclick = () => {
     if (numberOfCookies >= 50) {
         numberOfCookies -= 50; // numberOfCookies = numberOfCookies - 50;
         cookieIncrease++;
-        counter.innerHTML = `Cookies: ` + numberOfCookies;
+        counter.innerHTML = `Raw materials: ` + numberOfCookies;
         let t = cookieIncrease - 1;
         info.innerHTML = `You bought a new upgrade with turbo ${t}x`;
         info.style.color = "#b9f2ff";
@@ -128,15 +143,22 @@ cookieClickMultiplier.onclick = () => {
 autoClickerButton.onclick = () => {
     if (numberOfCookies >= autoClickerPrice) {
         numberOfCookies -= autoClickerPrice;
-        counter.innerHTML = `Cookies: ` + numberOfCookies;
+        counter.innerHTML = `Raw materials: ` + numberOfCookies;
+        info.style.display = "table"; 
         autoClickerPrice *= 2;
         autoClickerButton.innerHTML = `Buy Auto Clicker: ${autoClickerPrice}`;
         if (autoClickerIncrease == 0) {
             setInterval(() => {
                 numberOfCookies += autoClickerIncrease;
-                counter.innerHTML = `Cookies: ` + numberOfCookies;
+                counter.innerHTML = `Raw materials: ` + numberOfCookies;
             }, 1000);
         }
         autoClickerIncrease++;
+
     }
+    if(numberOfCookies>=50){
+        info.innerHTML = `You bought a new upgrade with turbo ${t}x`;
+        info.style.color = "#b9f2ff";
+        info.style.display = "table"; 
+    } 
 }
