@@ -67,12 +67,12 @@ h1 {
 
 @keyframes textShadow {
     0% {
-        text-shadow: 2px 2px 1px silver;
+        text-shadow: 2px 2px 1px rgb(170, 170, 170);
         
     }
 
     50% {
-        text-shadow: 2px 2px 1px grey;
+        text-shadow: 2px 2px 1px rgb(107, 107, 107);
        
     }
 
@@ -82,8 +82,7 @@ h1 {
     }
 }
 
-button,
-#info {
+button{
     display: table;
     margin: 0 auto;
     border: 1px solid black;
@@ -96,6 +95,20 @@ button,
     cursor: pointer;
     transition: .5s;
 }
+#info{
+    display: none;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 1em;
+    font-size: large;
+    background-color: rgba(0, 0, 0, 0.787);
+    color: #b9f2ff;
+    transition: .5s;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+
 button:hover{
     border: 1px solid #b9f2ff;
   

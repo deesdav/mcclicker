@@ -39,6 +39,7 @@ changeBackground.onclick = () => {
     changeColor();
     document.body.style.backgroundImage = "none";
     changeBackground.style.display = "none";
+    setBackground.style.display = "block";
     headline.style.color = "black";
     headline.style.animation = "none";
     headline.style.textShadow = "2px 2px 0px white";
@@ -46,7 +47,12 @@ changeBackground.onclick = () => {
 setBackground.onclick = () => {
     document.body.style.backgroundImage = "url('../res/img/background.jpg')";
     document.body.style.backgroundColor = "white";
-    clearInterval(changeInterval)
+    clearInterval(changeInterval);
+    headline.style.animation = "textShadow .5s infinite alternate linear";
+    headline.style.textShadow = "none";
+    headline.style.color = "#b9f2ff";
+    setBackground.style.display = "none";
+    changeBackground.style.display = "block";
 }
 const changeInterval = setInterval(() => {
     changeColor();
@@ -61,7 +67,7 @@ let autoClickerIncrease = 0;
 
 cookie.onclick = () => {
     numberOfCookies += cookieIncrease;
-    counter.innerHTML = `Cookies: ` + numberOfCookies;
+    counter.innerHTML = `Stones: ` + numberOfCookies;
     if (numberOfCookies == 150) {
         cookie.style.display = "none";
         cookie2.style.display = "block";
@@ -71,11 +77,17 @@ cookie.onclick = () => {
         aboutmusic.style.display = "none";
 
     }
+    if(numberOfCookies>=50){
+        info.style.display = "table";
+        info.innerHTML = `Hurry up, you can bought an upgrade!`;
+        info.style.color = "red";
+    } 
+
 
 }
 cookie2.onclick = () => {
     numberOfCookies += cookieIncrease;
-    counter.innerHTML = `Cookies: ` + numberOfCookies;
+    counter.innerHTML = `Irons: ` + numberOfCookies;
     if (numberOfCookies == 250) {
         cookie2.style.display = "none";
         cookie3.style.display = "block";
@@ -83,7 +95,7 @@ cookie2.onclick = () => {
 }
 cookie3.onclick = () => {
     numberOfCookies += cookieIncrease;
-    counter.innerHTML = `Cookies: ` + numberOfCookies;
+    counter.innerHTML = `Diamonds: ` + numberOfCookies;
     if (numberOfCookies == 350) {
         cookie3.style.display = "none";
         cookie4.style.display = "block";
@@ -92,7 +104,7 @@ cookie3.onclick = () => {
 }
 cookie4.onclick = () => {
     numberOfCookies += cookieIncrease;
-    counter.innerHTML = `Cookies: ` + numberOfCookies;
+    counter.innerHTML = `Diamonds: ` + numberOfCookies;
 
 }
 
@@ -104,7 +116,13 @@ cookieClickMultiplier.onclick = () => {
         counter.innerHTML = `Cookies: ` + numberOfCookies;
         let t = cookieIncrease - 1;
         info.innerHTML = `You bought a new upgrade with turbo ${t}x`;
-    }
+        info.style.color = "#b9f2ff";
+        info.style.display = "table"; 
+       
+    } 
+     
+   
+     
 }
 
 autoClickerButton.onclick = () => {
