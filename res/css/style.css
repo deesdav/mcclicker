@@ -5,6 +5,41 @@
     user-select: none;
     box-sizing: border-box;
 }
+@media screen and (max-width: 1024px) {
+    html, body{
+        font-size: small;
+        overflow: hidden;
+        margin: auto;
+        width: fit-content;
+        text-transform: uppercase;
+        display: block;
+        padding: 0px;
+        height: 100%;
+    }
+    button{
+        text-transform: uppercase;
+        font-size: small;
+    }
+    h1{
+        padding: 0px;
+        letter-spacing: normal;
+    }
+    #time{   
+        display: none;
+        opacity: 0;
+    }
+    #box-show{
+        opacity: 0.7;
+       transform: scale(0.8);
+    margin: auto 1em;
+    display: inline-block;
+    
+    }
+    #aboutmusic{
+        opacity: 0;
+    }
+  
+}
 
 
 body {
@@ -13,6 +48,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 710px;
+    width: 100%;
     margin: auto;
     transition: .8s;
 }
@@ -20,6 +56,7 @@ body {
 
 h1 {
     text-align: center;
+    letter-spacing: 2px;
     color: #b9f2ff;
     display: block;
     font-size: 45px;
@@ -30,17 +67,17 @@ h1 {
 
 @keyframes textShadow {
     0% {
-        text-shadow: 1px 2px 3px silver;
+        text-shadow: 2px 2px 1px silver;
         
     }
 
     50% {
-        text-shadow: 1px 2px 3px grey;
+        text-shadow: 2px 2px 1px grey;
        
     }
 
     100% {
-        text-shadow: 1px 2px 3px black;
+        text-shadow: 2px 2px 1px black;
       
     }
 }
@@ -49,7 +86,7 @@ button,
 #info {
     display: table;
     margin: 0 auto;
-    border: none;
+    border: 1px solid black;
     padding: 1em;
     font-size: large;
     background-color: rgba(0, 0, 0, 0.787);
@@ -57,6 +94,18 @@ button,
     transition: .5s;
     font-size: 20px;
     cursor: pointer;
+    transition: .5s;
+}
+button:hover{
+    border: 1px solid #b9f2ff;
+  
+}
+#info:hover{
+    cursor: default;
+}
+#time:hover{
+    cursor: default;
+    border: none;
 }
 
 .box {
@@ -83,17 +132,37 @@ button,
     position: absolute;
     left: 0px;
     bottom: 0px;
+    border: none;
+    transition: .5s;
     text-transform: uppercase;
     font-size: larger;
+}
+#setBackground{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border: none;
+    transition: .5s;
+    text-transform: uppercase;
+    font-size: larger;
+}
+#changeBackground:hover{
+    text-decoration: underline;
+    border: none;
+}
+#setBackground:hover{
+    text-decoration: underline;
+    border: none;
 }
 
 
 #counter {
     text-align: center;
     margin: auto;
+    
     display: table;
     font-size: 24px;
-    padding: 1em;
+    padding: 22px;
     color: white;
     animation: change 1s infinite alternate linear;
     background-color: rgba(0, 0, 0, 0.787);
@@ -113,11 +182,11 @@ button,
     position: absolute;
     right: 0px;
     bottom: 0px;
+    border: none;
     display: table;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.787);
     color: #b9f2ff;
-    ;
     font-size: 24px;
     padding: 1em;
 }
@@ -128,7 +197,7 @@ button,
     top: 0px;
     background-color: rgba(0, 0, 0, 0.787);
     color: #b9f2ff;
-    font-size: larger;
+    font-size: large;
     padding: 1em;
 }
 

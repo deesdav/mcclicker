@@ -10,9 +10,13 @@ const time = document.getElementById("time");
 const aboutmusic = document.getElementById("aboutmusic");
 const show = document.getElementById("box-show");
 const changeBackground = document.getElementById("changeBackground");
+const setBackground = document.getElementById("setBackground");
+const headline = document.getElementById("headline");
+
 
 const timer = time.onclick = () => {
     document.getElementById("time").innerHTML = Date();
+    
 }
 setInterval(() => {
     timer();
@@ -35,8 +39,16 @@ changeBackground.onclick = () => {
     changeColor();
     document.body.style.backgroundImage = "none";
     changeBackground.style.display = "none";
+    headline.style.color = "black";
+    headline.style.animation = "none";
+    headline.style.textShadow = "2px 2px 0px white";
 }
-setInterval(() => {
+setBackground.onclick = () => {
+    document.body.style.backgroundImage = "url('../res/img/background.jpg')";
+    document.body.style.backgroundColor = "white";
+    clearInterval(changeInterval)
+}
+const changeInterval = setInterval(() => {
     changeColor();
 }, 1000);
 
