@@ -57,6 +57,7 @@ cookie.onclick = () => {
     if (numberOfCookies == 1) {
         show.style.display = "none";
         aboutmusic.style.display = "none";
+
     }
 
 }
