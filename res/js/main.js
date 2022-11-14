@@ -45,7 +45,7 @@ changeBackground.onclick = () => {
     headline.style.textShadow = "2px 2px 0px white";
 }
 setBackground.onclick = () => {
-    document.body.style.backgroundImage = "url('../res/img/background.jpg')";
+    document.body.style.backgroundImage = "url('./res/img/background.jpg')";
     document.body.style.backgroundColor = "white";
     clearInterval(changeInterval);
     headline.style.animation = "textShadow .5s infinite alternate linear";
@@ -79,7 +79,7 @@ cookie.onclick = () => {
     }
     if(numberOfCookies>=50){
         info.style.display = "table";
-        info.innerHTML = `Hurry up, you can bought an upgrade!`;
+        info.innerHTML = `Hurry up, you can buy an upgrade!`;
         info.style.color = "red";
     } 
 
@@ -94,7 +94,7 @@ cookie2.onclick = () => {
     }
     if(numberOfCookies>=50){
         info.style.display = "table";
-        info.innerHTML = `Hurry up, you can bought an upgrade!`;
+        info.innerHTML = `Hurry up, you can buy an upgrade!`;
         info.style.color = "red";
     } 
 }
@@ -107,7 +107,7 @@ cookie3.onclick = () => {
     }
     if(numberOfCookies>=50){
         info.style.display = "table";
-        info.innerHTML = `Hurry up, you can bought an upgrade!`;
+        info.innerHTML = `Hurry up, you can buy an upgrade!`;
         info.style.color = "red";
     } 
 
@@ -117,7 +117,7 @@ cookie4.onclick = () => {
     counter.innerHTML = `Raw materials: ` + numberOfCookies;
     if(numberOfCookies>=50){
         info.style.display = "table";
-        info.innerHTML = `Hurry up, you can bought an upgrade!`;
+        info.innerHTML = `Hurry up, you can buy an upgrade!`;
         info.style.color = "red";
     } 
 }
