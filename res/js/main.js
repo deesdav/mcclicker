@@ -45,7 +45,7 @@ changeBackground.onclick = () => {
     headline.style.textShadow = "2px 2px 0px white";
 }
 setBackground.onclick = () => {
-    document.body.style.backgroundImage = "url(background.jpg)";
+    document.body.style.backgroundImage = "url(./res/img/background.jpg)";
     document.body.style.backgroundColor = "white";
     clearInterval(changeInterval);
     headline.style.animation = "textShadow .5s infinite alternate linear";
