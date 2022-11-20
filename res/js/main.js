@@ -68,6 +68,8 @@ let autoClickerIncrease = 0;
 cookie.onclick = () => {
     numberOfCookies += cookieIncrease;
     counter.innerHTML = `Stones: ` + numberOfCookies;
+    counter.style.boxShadow = "0px 5px 1px #B7B09C";
+    counter.style.textShadow = "0px 2px 1px #B7B09C";
     if (numberOfCookies == 150) {
         cookie.style.display = "none";
         cookie2.style.display = "block";
@@ -88,6 +90,8 @@ cookie.onclick = () => {
 cookie2.onclick = () => {
     numberOfCookies += cookieIncrease;
     counter.innerHTML = `Irons: ` + numberOfCookies;
+    counter.style.boxShadow = "0px 5px 1px #a19d94";
+    counter.style.textShadow = "0px 2px 1px #a19d94";
     if (numberOfCookies == 250) {
         cookie2.style.display = "none";
         cookie3.style.display = "block";
@@ -101,6 +105,8 @@ cookie2.onclick = () => {
 cookie3.onclick = () => {
     numberOfCookies += cookieIncrease;
     counter.innerHTML = `Diamonds: ` + numberOfCookies;
+    counter.style.boxShadow = "0px 5px 1px #b9f2ff";
+    counter.style.textShadow = "0px 2px 1px #b9f2ff";
     if (numberOfCookies == 350) {
         cookie3.style.display = "none";
         cookie4.style.display = "block";
@@ -115,6 +121,8 @@ cookie3.onclick = () => {
 cookie4.onclick = () => {
     numberOfCookies += cookieIncrease;
     counter.innerHTML = `Raw materials: ` + numberOfCookies;
+    counter.style.boxShadow = "0px 5px 1px gold";
+    counter.style.textShadow = "0px 2px 1px gold";
     if(numberOfCookies>=50){
         info.style.display = "table";
         info.innerHTML = `Hurry up, you can buy an upgrade!`;
